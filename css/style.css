@@ -2318,6 +2318,8 @@ p { margin: 0; }
   .members-grid { grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 0.7rem; }
   .member__quote { font-size: 0.88rem; }
   .hero { min-height: 92svh; }
+  .hero__script { font-size: 1.12rem; letter-spacing: 0.08em; margin-bottom: 0.5rem; line-height: 1.5; }
+  .hero__quote { font-size: 0.98rem; }
   .hero__actions .btn { width: 100%; max-width: 320px; }
   .gal__title { font-size: 0.94rem; }
   .gallery { columns: 1; }
@@ -2330,6 +2332,11 @@ p { margin: 0; }
   .page:not(.is-active) { position: absolute; }
   .guest__list { max-height: none; }
   .lightbox__stage { aspect-ratio: 1 / 1; }
+}
+
+@media (max-width: 380px) {
+  .hero__scroll { display: none; }
+  .hero { padding-block: calc(var(--nav-h) + 1.6rem) 3rem; }
 }
 
 @media (max-width: 359px) {
