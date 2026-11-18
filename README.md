@@ -79,6 +79,19 @@ Guestbook saat ini memakai `localStorage` (`denera_guestbook_v1`) sebagai protot
 - Klik logo DENERA 5x → "Once DENERA, Always DENERA."
 - Ketik `denera` di halaman → hidden message.
 
+## Muncul di pencarian Google/Chrome
+
+Situs ini sudah siap dirayapi: ada `robots.txt`, `sitemap.xml`, meta `robots: index, follow`, dan structured data JSON-LD (`WebSite` + `EducationalOrganization`).
+
+Agar benar-benar terindeks, langkah berikut butuh akun Google pemilik situs (tidak bisa dilakukan otomatis):
+
+1. Buka [Google Search Console](https://search.google.com/search-console) → **Add property** → **URL prefix** → `https://murohito9-sudo.github.io/denera/`.
+2. Verifikasi dengan metode **HTML tag**: salin tag dari Google, tempel di `<head>` `index.html`, commit. (Alternatif: verifikasi DNS hanya jika memakai domain sendiri.)
+3. Setelah terverifikasi: **Sitemaps** → kirim `sitemap.xml`. Lalu **URL Inspection** → tempel URL situs → **Request indexing**.
+4. Ulangi di [Bing Webmaster Tools](https://www.bing.com/webmasters) bila ingin muncul di Bing/Edge.
+
+Catatan realistis: kata kunci tunggal "denera" sudah dipakai PT Daya Energi Bersih Nusantara (anak perusahaan Danantara) yang diberitakan Antara, Jakarta Post, dan Bloomberg — angkatan sekolah tidak akan menang di kata kunci itu. Yang realistis adalah kata kunci panjang seperti "DENERA PDF Ulya" atau "website angkatan DENERA". Indeks pertama biasanya 3–14 hari setelah request indexing.
+
 ---
 
 © 2026 DENERA — The Fourth Generation of PDF Ulya

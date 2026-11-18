@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://murohito9-sudo.github.io/denera/sitemap.xml
